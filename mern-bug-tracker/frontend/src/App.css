@@ -1,0 +1,164 @@
+/* App.css - Styles for Bug Tracker Application */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #333;
+}
+
+/* Bug Form Styles */
+.bug-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    min-height: 200px; /* Ensure consistent height for the form */
+}
+
+.bug-form input,
+.bug-form textarea {
+    min-height: 50px; /* Set a minimum height for input and textarea */
+}
+
+.bug-form input,
+.bug-form textarea {
+    margin-bottom: 10px;
+    padding: 14px; /* Increased padding for better touch targets */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.bug-form input:focus,
+.bug-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.bug-form button {
+    padding: 14px; /* Increased padding for better touch targets */
+    background-color: #007bff; /* Change button color to blue */
+    color: white; /* Ensure text color is white for visibility */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Added transform for active state */
+}
+
+.bug-form button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.bug-form button:disabled {
+    background-color: #ccc;
+}
+
+/* Bug List Styles */
+.bug-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bug-item {
+    padding: 16px; /* Increased padding for better spacing */
+    border: 1px solid #ccc; /* Standard border for consistency */
+    margin-bottom: 15px; /* Increased margin for better separation */
+    border-radius: 4px; /* Standard rounded corners */
+    background-color: #ffffff; /* White background for better contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+.bug-item:hover {
+    background-color: #e2e2e2; /* Softer hover color for better user experience */
+}
+
+.bug-title {
+    color: #333; /* Set a visible color for the bug title */
+    font-weight: bold; /* Make the title bold */
+}
+
+.bug-description {
+    color: #555; /* Set a visible color for the bug description */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Bootstrap red for consistency */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px 12px; /* Added padding for better touch targets */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Error Message Styles */
+.error-message {
+    color: red; /* Set error message color to red */
+    font-weight: bold; /* Make error message bold */
+}
+
+/* Success Message Styles */
+.feedback-message {
+    color: #28a745; /* Set success message color to a brighter green */
+    font-weight: bold; /* Make success message bold */
+    background-color: #e9f9e9; /* Light green background for visibility */
+    padding: 10px; /* Add padding for better appearance */
+    border-radius: 4px; /* Rounded corners for a modern look */
+}
+
+/* Toast Notification Styles */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #444; /* Slightly lighter background for better contrast */
+    color: #ffffff; /* Ensure text color is white for visibility */
+    padding: 12px 16px; /* Added padding for better appearance */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    transition: opacity 0.5s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .bug-form {
+        flex-direction: column; /* Stack form elements vertically on small screens */
+    }
+
+    .bug-item {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .bug-form input,
+    .bug-form textarea {
+        font-size: 14px;
+    }
+
+    .bug-form button {
+        font-size: 14px;
+    }
+
+    .bug-item {
+        font-size: 14px;
+    }
+}
